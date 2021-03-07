@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@id/fragmentHome"
+            android:icon="@drawable/ic_house"
+            android:title="@string/home_menuItem"
+            />
+        <item  android:icon="@drawable/ic_writing" android:title="@string/orderItem_menu_text" android:id="@id/orderFragment"
+           />
+        <item android:icon="@drawable/ic_invoice" android:title="@string/productItem_menu_text" android:id="@id/productListFragment"/>
+        <item  android:icon="@drawable/ic_user" android:title="@string/profileItem_menu_text" android:id="@id/profileFragment"/>
+    </group>
+</menu>

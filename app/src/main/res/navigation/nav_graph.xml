@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentHome">
+
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.roshastudio.roshastu.view.FragmentHome"
+        android:label="FragmentHome" >
+        <action
+            android:id="@+id/action_fragmentHome_to_productsDetailFragment"
+            app:destination="@id/productsDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderFragment"
+        android:name="com.roshastudio.roshastu.view.OrderFragment"
+        android:label="OrderFragment" />
+    <fragment
+        android:id="@+id/productListFragment"
+        android:name="com.roshastudio.roshastu.view.ProductListFragment"
+        android:label="ProductListFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.roshastudio.roshastu.view.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/productsDetailFragment"
+        android:name="com.roshastudio.roshastu.view.ProductsDetailFragment"
+        android:label="ProductsDetailFragment" >
+        <action
+            android:id="@+id/action_productsDetailFragment_to_introDialogFragment"
+            app:destination="@id/introDialogFragment" />
+        <action
+            android:id="@+id/action_productsDetailFragment_to_specificationsDialogFragment"
+            app:destination="@id/specificationsDialogFragment" />
+        <action
+            android:id="@+id/action_productsDetailFragment_to_dialogAllComments"
+            app:destination="@id/dialogAllComments" />
+        <action
+            android:id="@+id/action_productsDetailFragment_to_dialogNewComment"
+            app:destination="@id/dialogNewComment" />
+    </fragment>
+    <dialog
+        android:id="@+id/introDialogFragment"
+        android:name="com.roshastudio.roshastu.view.IntroDialogFragment"
+        android:label="IntroDialogFragment" />
+    <dialog
+        android:id="@+id/specificationsDialogFragment"
+        android:name="com.roshastudio.roshastu.view.SpecificationsDialogFragment"
+        android:label="SpecificationsDialogFragment" />
+    <dialog
+        android:id="@+id/dialogAllComments"
+        android:name="com.roshastudio.roshastu.view.DialogAllComments"
+        android:label="DialogAllComments" />
+    <dialog
+        android:id="@+id/dialogNewComment"
+        android:name="com.roshastudio.roshastu.view.DialogNewComment"
+        android:label="DialogNewComment" />
+
+</navigation>

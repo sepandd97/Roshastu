@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="dp4">4dp</dimen>
+    <dimen name="dp8">8dp</dimen>
+    <dimen name="dp16">16dp</dimen>
+    <dimen name="dp20">20dp</dimen>
+    <dimen name="dp24">24dp</dimen>
+    <dimen name="dp32">32dp</dimen>
+    <dimen name="dp40">40dp</dimen>
+    <dimen name="dp48">48dp</dimen>
+    <dimen name="dp60">60dp</dimen>
+    <dimen name="dp96">96dp</dimen>
+    <dimen name="fragmentContainerViewMarginfromtop">50dp</dimen>
+    <dimen name="roundedImageViewHeaderHight">100dp</dimen>
+    <dimen name="NavViewItemIconPadding">8dp</dimen>
+
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="attributs"
+            type="com.roshastudio.roshastu.model.ProductAtributes" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/products_titel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp4"
+            android:layout_marginTop="@dimen/dp8"
+            android:drawablePadding="8dp"
+            android:gravity="center_horizontal"
+            android:text="@{attributs.titel+':'}"
+            android:textColor="@color/black_alpha"
+            android:textSize="18sp"
+            app:drawableStartCompat="@drawable/txv_icon_product"
+            app:drawableTint="@color/ashgray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="adsfadsfasd" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/products_content_garantie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp8"
+            android:text="@{attributs.titelDesc}"
+            android:textColor="@color/black_titel_texts"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/products_titel"
+            app:layout_constraintStart_toEndOf="@+id/products_titel"
+            app:layout_constraintTop_toTopOf="@+id/products_titel"
+            tools:text="adsfadsfasd" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

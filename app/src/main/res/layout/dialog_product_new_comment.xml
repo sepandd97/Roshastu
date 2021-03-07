@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/transparent"
+        android:backgroundTint="@color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="rtl">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_marginEnd="@dimen/dp60"
+            android:layout_marginStart="@dimen/dp60"
+            android:background="@drawable/bottom_shet_dialog_top_shape"
+            android:id="@+id/imageView_bootomshet_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.appcompat.widget.Toolbar
+            android:backgroundTint="@color/transparent"
+            android:background="@color/transparent"
+            android:id="@+id/toolbar_newcomment_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fragmentContainerViewMarginfromtop"
+            android:paddingStart="6dp"
+            android:paddingEnd="16dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_close_black_24dp" />
+
+
+        <RelativeLayout
+            android:backgroundTint="@color/transparent"
+            android:background="@color/transparent"
+
+            android:id="@+id/relativeLayout_newcomment_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_newcomment_dialog">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/new_comment_titel"
+                style="@style/CommentTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8"
+                app:boxCornerRadiusBottomStart="30dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="عنوان "
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/new_comment_desc"
+                style="@style/CommentTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@id/new_comment_titel"
+                android:layout_margin="@dimen/dp8"
+                app:boxCornerRadiusBottomStart="30dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="top"
+                    android:hint="متن نظر"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp60"
+                android:layout_below="@id/new_comment_desc"
+                android:layout_marginStart="@dimen/dp48"
+                android:layout_marginTop="@dimen/dp8"
+                android:layout_marginEnd="@dimen/dp48"
+                android:text="ارسال دیدگاه"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:theme="@style/sendCommentBtn" />
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

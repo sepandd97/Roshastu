@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+        <variable
+            name="productitem"
+            type="com.roshastudio.roshastu.model.Product" />
+    </data>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layoutDirection="rtl"
+    android:id="@+id/rv_item_horizental_layout"
+    android:layout_width="130dp"
+    android:layout_height="180dp"
+    android:gravity="center_vertical"
+   android:layout_marginTop="@dimen/dp8"
+    android:layout_marginEnd="@dimen/dp8"
+    >
+    <androidx.cardview.widget.CardView
+        android:gravity="center_vertical"
+
+        android:layout_width="130dp"
+        android:layout_height="180dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="@dimen/dp8"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:scaleType="centerCrop"
+                android:background="@color/black_alpha"
+                android:id="@+id/home_hr_items_Image"
+                android:layout_width="120dp"
+                android:layout_height="130dp"
+                app:imgLoderDrwable="@{productitem.itemImage}"
+                android:layout_marginTop="@dimen/dp8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/home_hr_items_name_txv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:textSize="12sp"
+                android:text="@{productitem.itemTitel}"
+                android:textColor="@color/neonblue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/home_hr_items_Image" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="110dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="4dp"
+                android:background="#DEDDDD"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/home_hr_items_name_txv" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/home_hr_items_price_txv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text="@{productitem.itemPrice}"
+                android:textColor="@color/neonblue"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</layout>
